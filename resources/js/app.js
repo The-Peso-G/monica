@@ -105,10 +105,6 @@ Vue.component(
   'form-specialdeceased',
   require('./components/partials/SpecialDeceased.vue').default
 );
-Vue.component(
-  'emotion',
-  require('./components/people/Emotion.vue').default
-);
 
 // Dashboard
 Vue.component(
@@ -163,7 +159,7 @@ Vue.component(
 
 Vue.component(
   'contact-gift',
-  require('./components/people/Gifts.vue').default
+  require('./components/people/gifts/Gifts.vue').default
 );
 
 Vue.component(
@@ -194,6 +190,11 @@ Vue.component(
 Vue.component(
   'message',
   require('./components/people/conversation/Message.vue').default
+);
+
+Vue.component(
+  'activity-list',
+  require('./components/people/activity/ActivityList.vue').default
 );
 
 Vue.component(

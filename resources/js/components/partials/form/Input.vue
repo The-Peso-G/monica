@@ -26,10 +26,13 @@ input:focus {
       autofocus
       :required="required"
       :name="id"
+      :placeholder="placeholder"
       :class="inputClass"
       :style="inputStyle"
       :value="value"
+      :maxlength="maxlength"
       @input="event => { $emit('input', event.target.value) }"
+      @keyup.enter="event => { $emit('submit', event.target.value) }"
     />
   </div>
 </template>
@@ -50,6 +53,10 @@ export default {
       type: String,
       default: '',
     },
+    placeholder: {
+      type: String,
+      default: '',
+    },
     required: {
       type: Boolean,
       default: true,
@@ -65,6 +72,10 @@ export default {
     iclass: {
       type: String,
       default: ''
+    },
+    maxlength: {
+      type: Number,
+      default: null,
     },
   },
 
